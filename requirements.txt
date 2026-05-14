@@ -1,0 +1,16 @@
+# EPUB to Markdown Converter Dependencies
+
+# Core dependencies for EPUB processing
+html2text>=2020.1.16
+
+# Language detection (optional, using built-in detection for now)
+# langdetect>=1.0.9
+
+# Standard library modules used:
+# - zipfile (built-in)
+# - xml.etree.ElementTree (built-in)
+# - pathlib (built-in)
+# - re (built-in)
+# - typing (built-in)
+# - urllib.parse (built-in)
+# - html (built-in)
