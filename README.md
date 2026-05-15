@@ -158,8 +158,7 @@ epub2md/
 │   └── utils.py             # 工具函数
 ├── md_merger/               # MD 合并工具模块
 │   └── core.py              # 合并和链接修正逻辑
-├── requirements.txt         # Python 依赖
-└── setup.py                 # 安装配置
+└── requirements.txt         # Python 依赖
 ```
 
 ## 许可证
