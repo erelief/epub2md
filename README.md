@@ -37,23 +37,21 @@ EPUB 中的注释通常以跨页超链接的形式存在：正文中的上标数
 
 ## 安装
 
-### 环境要求
+### 便携版（推荐，无需安装 Python）
 
-- Python 3.7 或更高版本
-- Windows 操作系统（批处理脚本为 Windows 专用）
+1. 前往 [Releases](https://github.com/erelief/epub2md/releases) 页面下载最新版本的 `epub2md-x.x.x-portable.zip`
+2. 解压到任意目录
+3. 双击 `epub_converter.bat` 或 `merge_md.bat` 即可使用
 
-### 安装步骤
+便携版内置了 Python 运行环境和所有依赖，解压即用。
+
+### 从源码运行
+
+如果已有 Python 环境，也可以直接克隆运行：
 
 ```bash
 git clone https://github.com/erelief/epub2md.git
 cd epub2md
-```
-
-仅此而已。项目只有一个 Python 依赖（`html2text`），首次运行时批处理脚本会自动安装。
-
-如果需要手动安装依赖：
-
-```bash
 pip install html2text
 ```
 
@@ -66,8 +64,6 @@ pip install html2text
 ```batch
 epub_converter.bat
 ```
-
-脚本会自动检查 Python 环境、安装依赖，然后进入交互模式，提示你输入 EPUB 文件路径。
 
 也支持命令行直接指定文件：
 
@@ -142,6 +138,8 @@ python -m epub_converter [文件或文件夹路径] [选项]
 
 ```
 epub2md/
+├── .github/workflows/
+│   └── build-release.yml    # CI: 自动构建便携版 Release
 ├── epub_converter.bat       # 主程序启动脚本
 ├── merge_md.bat             # MD 合并工具启动脚本
 ├── epub_converter/          # 转换器核心模块
